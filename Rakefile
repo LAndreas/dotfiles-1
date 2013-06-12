@@ -34,6 +34,7 @@ task :install do
       link_file(file)
     end
   end
+  install_powerline
 end
 
 def replace_file(file)
@@ -86,6 +87,28 @@ def install_oh_my_zsh
       exit
     else
       puts "skipping oh-my-zsh, you will need to change ~/.zshrc"
+    end
+  end
+end
+
+def install_powerline 
+  if File.exist?(File.join(ENV['HOME'], ".local/lib/python2.7/site-packages/powerline"))
+    puts "found powerline"
+  else
+    unless system(%Q{which pip})
+      puts "You need pip to install powerline."
+      exit
+    end
+    
+    print "install powerline [ynq]"
+    case $always_yes || $stdin.gets.chomp
+    when 'y'
+      puts "installing powerline"
+      system %Q{pip install --user git+git://github.com/Lokaltog/powerline}
+    when 'q'
+      exit
+    else
+      puts "skipping powerline"
     end
   end
 end
