@@ -4,6 +4,12 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" Set Background to dark
+set bg=dark
+
+" Set Powerline stuff
+set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
