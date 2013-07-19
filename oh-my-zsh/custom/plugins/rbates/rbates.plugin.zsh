@@ -2,6 +2,10 @@ c() { cd $PROJECTS/$1; }
 _c() { _files -W $PROJECTS -/; }
 compdef _c c
 
+s() { cd $STUDIUM/$1; }
+_s() { _files -W $STUDIUM -/; }
+compdef _s s
+
 h() { cd ~/$1; }
 _h() { _files -W ~/ -/; }
 compdef _h h
