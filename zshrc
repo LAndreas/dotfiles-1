@@ -5,7 +5,7 @@ DISABLE_AUTO_UPDATE="true"
 
 plugins=(gitfast git-extras git-hubflow gitfast extract rvm command-not-found sublime bundler brew gem rbates rake zsh-syntax-highlighting)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-export PATH="/usr/local/bin:$PATH:$HOME/Library/Python/2.7/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/Library/Python/2.7/bin:/bin"
 
 
 source $ZSH/oh-my-zsh.sh
