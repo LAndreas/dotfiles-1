@@ -1,4 +1,5 @@
 alias reload!=". ~/.zshrc"
+alias ssh-remove="ssh-keygen -R "
 
 #Hash
 hash -d dev=$PROJECTS
