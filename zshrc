@@ -10,6 +10,9 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH:$HOME/Library/Python/2.7/bin:/
 
 source $ZSH/oh-my-zsh.sh
 
+fpath=(/usr/local/share/zsh/site-functions $fpath)
+source /usr/local/share/zsh/site-functions/go
+
 # for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -24,3 +27,4 @@ if [ -e $HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh
 then
 	source $HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
+
